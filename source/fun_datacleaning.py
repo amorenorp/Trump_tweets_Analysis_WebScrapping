@@ -10,6 +10,11 @@ warnings.filterwarnings("ignore")
 ### Limpiar Tump Tweets
 
 def clean_dataframe(archivo):
+    '''
+    Esta funcion recoge el .csv descargado de Kaggle y realiza un datacleanning.
+    Takes: .csv
+    Returns: dataframe "dfcount" con la cuenta de tweets por día. 
+    '''
 
     data = pd.read_csv(f'input/{archivo}')
     df = pd.DataFrame(data)
@@ -30,6 +35,12 @@ def clean_dataframe(archivo):
 ## Limpiar CSV Descargado
 
 def descargaclean(archivo_nasdaq):
+
+    '''
+    Esta funcion limpia el archivo descargado por Selenium
+    Takes: .csv
+    Returns: archivo "nasdaq.csv" limpio. 
+    '''
     
     data = pd.read_csv(f'output/{archivo_nasdaq}')
     df = pd.DataFrame(data)
@@ -42,6 +53,11 @@ def descargaclean(archivo_nasdaq):
 
 
 ### Funcion para despues del Merge , nueva columna
+    '''Esta funcion agrupa la columna en los siguientes valores
+    Takes: un numero de la columna
+    Returns: una string para indicar en qué rango se encuentra 
+    '''
+
 def tweets_count(x):
     if x > 34: 
         return "Más de 35"
@@ -53,6 +69,14 @@ def tweets_count(x):
 
 ### 
 def unir_tablas(csvnasdaq,csvtrump):
+    '''
+     Esta función toma dos argumentos por un lado el csv Nasdaq limpio y por otro el csv Tweets Trump limpio
+     y los mergea por la columna `date`
+
+    Takes: dos archivos .csv
+    Returns: un df_resultado de ambos .csv unidos   
+    '''
+
     
     data_nasdaq = pd.read_csv(f'output/{csvnasdaq}')
 
@@ -62,7 +86,7 @@ def unir_tablas(csvnasdaq,csvtrump):
     
     df_resultado = dfcount.merge(df_nasdaq, left_on="index", right_on="Date")
 
-    ##### Añadir neuva columna con la funcion de tweets_count que está arriba. 
+    ##### Añadir nueva columna con la funcion de tweets_count que está arriba. 
 
     df_resultado["tweets"] = df_resultado["tweet_count"].apply(tweets_count)
     

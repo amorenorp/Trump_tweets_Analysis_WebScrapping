@@ -9,6 +9,13 @@ from bs4 import BeautifulSoup
 
 
 def nasdaqinfo(url):
+    '''
+    Esta función descarga un csv de la web Yahoo finance usando Selenium.
+    Takes: url
+    Returns: un .csv
+    '''
+
+
     # open chrome
     driver = webdriver.Chrome()
     driver.implicitly_wait(30) # Esperar 30s para cargar
@@ -43,9 +50,9 @@ def nasdaqinfo(url):
                                       '/html/body/div[1]/div/div/div[1]/div/div[3]/div[1]/div/div[2]/div/div/section/div[1]/div[2]/span[2]/a/span')))\
     .click()
     
-    """
+    
     #close google
     driver.quit()
-    """
+    
     return "Task done!"
     

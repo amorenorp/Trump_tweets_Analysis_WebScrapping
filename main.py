@@ -24,7 +24,7 @@ def funcion_final():
     print('Ya he acabado con el Selenium')
 
     fnd.descargaclean(archivo_yahoo)
-    print('Ya he limpiado la tabala de selenium')
+    print('Ya he limpiado la tabla de selenium')
 
     limpiar_unir=  fnd.unir_tablas('nasdaq_clean.csv',"trumptweets.csv")
     print('Acabo de limpiar y unir las tablas finales, te dejo un head')
