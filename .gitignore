@@ -127,3 +127,14 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+## OTRAS COSAS
+
+__pycache__
+cleanning Nasdaq.ipynb
+selenium.ipynb
+tweets Trump clean.ipynb
+Untitled.ipynb
+para graficos con RT y Fav.csv
+.DS_Store
