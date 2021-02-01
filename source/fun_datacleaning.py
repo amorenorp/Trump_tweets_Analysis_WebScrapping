@@ -16,7 +16,7 @@ def clean_dataframe(archivo):
     Returns: dataframe "dfcount" con la cuenta de tweets por día. 
     '''
 
-    data = pd.read_csv(f'input/{archivo}')
+    data = pd.read_csv(f'data/{archivo}')
     df = pd.DataFrame(data)
     df = df[['date','retweets','favorites','content']]
     df['date'] = pd.to_datetime(df['date'])
@@ -42,7 +42,7 @@ def descargaclean(archivo_nasdaq):
     Returns: archivo "nasdaq.csv" limpio. 
     '''
     
-    data = pd.read_csv(f'output/{archivo_nasdaq}')
+    data = pd.read_csv(f'data/{archivo_nasdaq}')
     df = pd.DataFrame(data)
     df["crecimiento"] = df["Close"]-df["Open"]
     df["%"]= (df["crecimiento"]*100)/df["Close"]
