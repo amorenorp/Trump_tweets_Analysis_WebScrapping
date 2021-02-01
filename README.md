@@ -1,6 +1,6 @@
 #   Trump tweets Analysis WebScrapping project
 
-![img_don]()
+![img_don](https://github.com/amorenorp/Trump_tweets_Analysis_WebScrapping/blob/main/Img/img_don.jpg)
 
 En este proyecto he utlizado el documento [Trump Tweets](https://www.kaggle.com/austinreese/trump-tweets) descargado de Kaggle.
 
@@ -16,7 +16,7 @@ Tenía entendido que cada vez que el bueno de Donald estaba muy activo en esta r
 
 Me he propuesto ver que tal le fue al Nasdaq durante esos días e intentar sacar una conclusión parecida a esta: 
 
-![img_tweet]()
+![img_tweet](https://github.com/amorenorp/Trump_tweets_Analysis_WebScrapping/blob/main/Img/img_tweet.png)
 
 
 # Proceso
